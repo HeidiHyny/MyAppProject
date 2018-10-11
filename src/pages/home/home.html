@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic 4 Componets Action Sheets
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="padding action-sheets-basic-page">
+  <button ion-button block (click)="openMenu()">
+Show Action Sheet
+  </button>
+  
+  <h1>My Great App</h1>
+  <p>
+    Hello there
+  </p>
+  <button ion-button color="dark" outline icon-end>Plan it
+    <ion-icon name="planet"></ion-icon>
+  </button>
+  <ion-card>
+      <ion-card-header>
+        Explore neardy
+      </ion-card-header>
+  <ion-list>
+      <button ion-item>
+        <ion-icon name="cart" item-start></ion-icon>
+        Shopping
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="medical" item-start></ion-icon>
+        Hospital
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="cafe" item-start></ion-icon>
+        Cafe
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="paw" item-start></ion-icon>
+        Dog Park
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="beer" item-start></ion-icon>
+        Pub
+      </button>
+  
+      <button ion-item>
+        <ion-icon name="planet" item-start></ion-icon>
+        Space
+      </button>
+  
+    </ion-list>
+  </ion-card>
+
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list>
+  <ion-item *ngFor="let item of items">
+    {{ item }}
+  </ion-item>
+</ion-list>
+
+</ion-content>
+
